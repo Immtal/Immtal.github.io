@@ -181,6 +181,19 @@
     </entry>
     
     
+    
+    <entry>
+      <title></title>
+      <link href="/2024/12/12/Terminal&amp;Server/"/>
+      <url>/2024/12/12/Terminal&amp;Server/</url>
+      
+        <content type="html"><![CDATA[<h1>Common commands</h1><p>登陆服务器</p><ul><li>ssh -p 22022 -L 15906:cpu1:5906 <a href="mailto:qiminsong@210.77.30.33">qiminsong@210.77.30.33</a></li></ul><p>本地上传文件至服务器</p><ul><li>scp -P 22022 /Users/qiminsong/Desktop/Research/Cleaned_working/dataproductserver.wl <a href="mailto:qiminsong@210.77.30.33">qiminsong@210.77.30.33</a>:/home/qiminsong/CS</li><li>scp -P 22022 本地文件路径 <a href="mailto:qiminsong@210.77.30.33">qiminsong@210.77.30.33</a>:服务器文件路径</li></ul><p>服务器下载文件至本地</p><ul><li>scp -P 22022 <a href="mailto:qiminsong@210.77.30.33">qiminsong@210.77.30.33</a>:/home/qiminsong/CS/dhmdM_m2_time_domain_100-440Hz_RC_prl_12fmax.csv /Users/qiminsong/Desktop/Research/Parameter_Estimation/Data_RC</li><li>scp -P 22022 <a href="mailto:qiminsong@210.77.30.33">qiminsong@210.77.30.33</a>:服务器文件路径 本地文件路径</li></ul><p>Mathematica运行.wl文件</p><ul><li>math -script xxx.wl</li></ul><p>Python运行.py文件</p><ul><li>python <a href="http://file.py">file.py</a><ul><li>如果要用虚拟环境的话记得先激活  conda activate GWserver）</li></ul></li></ul><p>用来查找当前正在运行的进程中与 dataproductserver2.wl 相关的进程</p><ul><li>ps aux | grep dataproductserver2.wl</li></ul><h1>git 相关</h1><p>把本地工作区上传到 github</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add . </span><br><span class="line">git status</span><br><span class="line">git commit -m <span class="string">&quot;new features.&quot;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure><p>从远程仓库下载最新提交，并且不动本地工作区</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br></pre></td></tr></table></figure><p>强制把本地 <code>main</code> 分支重置为远程 <code>origin/main</code>。本地未提交的修改会被删除，已修改但未<code>add</code>的文件也会被删除，与远程不同的内容会被覆盖。即：本地仓库=远程仓库当前状态。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard origin/main</span><br></pre></td></tr></table></figure><p>如果想把“未跟踪”文件也一起删除，比如工作区新写的脚本或新生成的输出文件等等。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clean -fd</span><br><span class="line">git clean -f：删未跟踪文件</span><br><span class="line">git clean -d：连目录一起删</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
   
   
 </search>
